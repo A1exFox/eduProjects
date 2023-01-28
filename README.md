@@ -1,1 +1,0 @@
-[Список выполненных работ](https://a1exfox.github.io/eduProjects/)
