@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
-@import 'normalize.css';
 // --------------------------------------------------- reset
 * {
   margin: 0;
@@ -29,22 +28,27 @@ html, body {
 }
 //---------------------------------------------------- burger
 body.activeburger {
+
   overflow: hidden;
 
   .headmenu {
-    left: 10px;
-    right: 10px;
+    opacity: 1;
 
-    width: auto;
+    left: 2%;
+
+    width: 96%;
 
     overflow: auto;
 
     padding: 25px;
+
   }
   .header__burger {
+    background: #eeeeee;
     & span {
       &:not(:last-child, :first-child) {
         opacity: 0;
+
       }
       &:first-child {
         transform: translate(0px, 14px) rotate(45deg);
@@ -102,15 +106,18 @@ body.activeburger {
     display: flex;
     flex-wrap: wrap;
     @media (max-width: 426px) {
+
       display: block;
+
+      opacity: 0;
 
       position: absolute;
 
-      left: -10px;
-      top: 85px;
-      bottom: 10px;
+      left: -2%;
+      top: 60px;
+      bottom: 2%;
 
-      width: 0px;
+      width: 0%;
 
       background: #eeeeee;
 
@@ -119,6 +126,8 @@ body.activeburger {
       overflow: hidden;
 
       padding: 0px;
+
+      transition: 0.2s;
     }
 
     & li {
@@ -160,8 +169,11 @@ body.activeburger {
         }
       }
     }
+    &__link {}
   }
-  &__right {
+  &__right {}
+  &__burger {
+
     display: none;
     @media (max-width: 426px) {
       display: block;
@@ -175,13 +187,12 @@ body.activeburger {
 
     background: #fafafa;
 
-  }
-  &__burger {
     opacity: 1;
 
     padding: 7px;
 
     & span {
+      transition: 0.2s;
       display: block;
 
       width: 100%;
