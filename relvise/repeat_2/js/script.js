@@ -5,7 +5,7 @@ function clickIntoBody(event) {
     return;
   }
   if (document.body.classList.contains('activemenu')) {
-    document.body.classList.toggle('activemenu');
+    document.body.classList.remove('activemenu');
     return;
   }
 }
