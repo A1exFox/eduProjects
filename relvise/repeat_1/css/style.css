@@ -30,6 +30,26 @@ html, body {
   color: #737373;
 }
 
+body.activeburger {
+  overflow: hidden;
+}
+body.activeburger .headmenu {
+  left: 10px;
+  right: 10px;
+  width: auto;
+  overflow: auto;
+  padding: 25px;
+}
+body.activeburger .header__burger span:not(:last-child, :first-child) {
+  opacity: 0;
+}
+body.activeburger .header__burger span:first-child {
+  transform: translate(0px, 14px) rotate(45deg);
+}
+body.activeburger .header__burger span:last-child {
+  transform: translate(0px, -13px) rotate(-45deg);
+}
+
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -77,6 +97,20 @@ html, body {
   display: flex;
   flex-wrap: wrap;
 }
+@media (max-width: 426px) {
+  .header .headmenu {
+    display: block;
+    position: absolute;
+    left: -10px;
+    top: 85px;
+    bottom: 10px;
+    width: 0px;
+    background: #eeeeee;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 0px;
+  }
+}
 .header .headmenu li {
   list-style: none;
 }
@@ -90,9 +124,21 @@ html, body {
     font-size: 16px;
   }
 }
+@media (max-width: 426px) {
+  .header .headmenu__item {
+    font-size: 20px;
+    line-height: 250%;
+    text-align: center;
+  }
+}
 .header .headmenu__item a {
   display: inline-block;
   padding: 0 5px;
+}
+@media (max-width: 426px) {
+  .header .headmenu__item a {
+    display: block;
+  }
 }
 .header .headmenu__item a:hover {
   text-decoration: underline;
@@ -100,14 +146,25 @@ html, body {
 .header .headmenu__item:not(:last-child) {
   margin-right: 10px;
 }
+@media (max-width: 426px) {
+  .header .headmenu__item:not(:last-child) {
+    margin-right: 0;
+  }
+}
 .header__right {
   display: none;
   width: 50px;
   border-radius: 3px;
-  margin-right: 10px;
-  background: #efefef;
+  margin-right: 5px;
+  background: #fafafa;
+}
+@media (max-width: 426px) {
+  .header__right {
+    display: block;
+  }
 }
 .header__burger {
+  opacity: 1;
   padding: 7px;
 }
 .header__burger span {
