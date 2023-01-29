@@ -10,26 +10,63 @@ body {
 h1 {
   margin: 0;
 }
-a {
-  color: #0000ff;
-  text-decoration: underline;
-}
-a:hover {
-  color: #ff0000;
-}
 .wrapper {
   min-height: 100%;
   box-sizing: border-box;
   margin: 0;
 }
-.text {
+.titlepage {
   text-align: center;
+
   margin-bottom: 25px;
 }
 .list {
-  width: fit-content;
+  width: 500px;
+
   margin: 0 auto;
+
   padding: 25px 25px 25px 50px;
+
   background: #e5e5e5;
-  line-height: 1.8;
+
+  line-height: 1.2;
 }
+.item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.item a {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 0%;
+  color: inherit;
+
+  display: block;
+
+  border: 1px solid #bbbbbb;
+  border-radius: 0 0 10px 10px;
+
+  padding: 0px 10px;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  transition: 0.2s;
+}
+.item.active a {
+  padding: 10px 10px;
+
+  line-height: 140%;
+
+  opacity: 1;
+
+}
+.itemtitle {
+  color: #0000ff;
+  text-decoration: underline;
+}
+.itemtitle:hover {
+  cursor: pointer;
+  color: #ff0000;
+}
+.itemlink {}
