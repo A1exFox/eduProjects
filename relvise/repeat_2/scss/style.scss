@@ -39,11 +39,36 @@ body {
   padding: 0 10px;
   margin: 0 auto;
 }
+body.activemenu {
+  overflow: hidden;
+  .headermenu {
+    left: 2%;
+    width: 96%;
+    overflow: auto;
+    padding: 25px;
+    opacity: 1;
+  }
+  .header__burger {
+    background: #eeeeee;
+    span {
+      &:not(:last-child, :first-child) {
+        opacity: 0;
+      }
+      &:first-child {
+        transform: translate(0px, 14px) rotate(45deg);
+      }
+      &:last-child {
+        transform: translate(0px, -13px) rotate(-45deg);
+      }
+    }
+  }
+}
 // ----------------------------------- header
 .header {
   &__container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     min-height: 104px;
     @media (max-width: 769px) {
@@ -70,11 +95,41 @@ body {
     flex: 1 1 auto;
     display: flex;
     flex-wrap: wrap;
+    @media (max-width: 426px) {
+      position: absolute;
+
+      display: block;
+
+      left: -20px;
+      top: 60px;
+      bottom: 2%;
+
+      background: #eeeeee;
+
+      border-radius: 10px;
+
+      text-align: center;
+
+      width: 0;
+
+      overflow: hidden;
+
+      padding: 0;
+
+      opacity: 0;
+
+      transition: 0.2s;
+    }
 
     li {
       list-style: none;
     }
     a {
+
+      @media (max-width: 426px) {
+        display: block;
+      }
+
       &:hover {
         text-decoration: underline;
       }
@@ -85,6 +140,10 @@ body {
       letter-spacing: 0.2px;
       @media (max-width: 769px) {
         font-size: 16px;
+      }
+      @media (max-width: 426px) {
+        font-size: 20px;
+        line-height: 250%;
       }
 
       padding: 0px 5px;
@@ -97,9 +156,12 @@ body {
     }
   }
   &__burger {
-    display: none;
-
     flex: 0 0 60px;
+
+    display: none;
+    @media (max-width: 426px) {
+      display: block;
+    }
 
     background: #fafafa;
 
@@ -114,9 +176,14 @@ body {
       height: 2px;
 
       background: #737373;
+
       &:not(:last-child) {
         margin-bottom: 7px;
       }
+
+      opacity: 1;
+
+      transition: 0.2s;
     }
   }
 }
