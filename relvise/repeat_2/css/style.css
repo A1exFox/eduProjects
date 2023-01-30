@@ -103,10 +103,10 @@ body.activemenu .header__burger span:last-child {
 @media (max-width: 426px) {
   .header .headermenu {
     position: absolute;
-    display: block;
     left: -20px;
     top: 60px;
     bottom: 2%;
+    display: block;
     background: #eeeeee;
     border-radius: 10px;
     text-align: center;

@@ -12,6 +12,7 @@
 }
 a {
   color: inherit;
+
   text-decoration: none;
 }
 html,
@@ -43,9 +44,13 @@ body.activemenu {
   overflow: hidden;
   .headermenu {
     left: 2%;
+
     width: 96%;
+
     overflow: auto;
+
     padding: 25px;
+
     opacity: 1;
   }
   .header__burger {
@@ -103,12 +108,11 @@ body.activemenu {
     flex-wrap: wrap;
     @media (max-width: 426px) {
       position: absolute;
-
-      display: block;
-
       left: -20px;
       top: 60px;
       bottom: 2%;
+
+      display: block;
 
       background: #eeeeee;
 
