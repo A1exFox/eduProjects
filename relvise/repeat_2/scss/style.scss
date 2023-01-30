@@ -199,16 +199,7 @@ body.activemenu {
 
   .welcome {
     &__container {}
-    &__title {
-      //styleName: h1;
-      font-family: Montserrat;
-      font-size: 58px;
-      font-weight: 800;
-      line-height: 80px;
-      letter-spacing: 0.20000000298023224px;
-      text-align: left;
-
-    }
+    &__title {}
     &__text {}
     &__buttons {}
     &__link {}

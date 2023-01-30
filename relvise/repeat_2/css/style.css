@@ -177,11 +177,3 @@ body.activemenu .header__burger span:last-child {
 .main__welcome {
   margin: 80px 0 0 0;
 }
-.main .welcome__title {
-  font-family: Montserrat;
-  font-size: 58px;
-  font-weight: 800;
-  line-height: 80px;
-  letter-spacing: 0.200000003px;
-  text-align: left;
-}
