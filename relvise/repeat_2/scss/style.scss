@@ -190,6 +190,30 @@ body.activemenu {
 // ----------------------------------- main
 .main {
   flex: 1 0 auto;
+  // ----------------------------- elements
+
+  &__welcome {
+    margin: 80px 0 0 0;
+  }
+  // ----------------------------- objects
+
+  .welcome {
+    &__container {}
+    &__title {
+      //styleName: h1;
+      font-family: Montserrat;
+      font-size: 58px;
+      font-weight: 800;
+      line-height: 80px;
+      letter-spacing: 0.20000000298023224px;
+      text-align: left;
+
+    }
+    &__text {}
+    &__buttons {}
+    &__link {}
+    &__image {}
+  }
 }
 // ----------------------------------- footer
 .footer {}
